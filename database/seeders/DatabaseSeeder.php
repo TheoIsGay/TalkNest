@@ -25,7 +25,13 @@ class DatabaseSeeder extends Seeder
 
         Post::factory()->create([
             'title' => 'My name is Jeff',
-            'content' => 'yes, it indeed is...',
+            'content' => '## Yes it is, and here\'s why
+1. Jeff is a *cool* name
+2. It\'s **easy** to pronounce!
+
+![Jeff](https://uploads.dailydot.com/2024/08/my-name-is-jeff-meme.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop)
+
+> Thanks for reading, Habibi!',
             'user_id' => 1
         ]);
 

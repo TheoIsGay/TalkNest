@@ -20,6 +20,8 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "dayjs": "^1.11.13",
+        "dompurify": "^3.1.7",
         "marked": "^14.1.3"
     }
 }

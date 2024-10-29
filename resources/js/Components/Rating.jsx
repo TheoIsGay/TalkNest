@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { router } from "@inertiajs/react";
 import axios from "axios";
 
 export default function Rating({ auth, postId, initialRating, initialVote }) {
@@ -9,8 +10,7 @@ export default function Rating({ auth, postId, initialRating, initialVote }) {
     const handleRate = async (type) => {
         if (!auth.user) {
             setMessage('You need to be logged in to rate.');
-            // Send the user to login route
-
+            router.get(route('login'));
             return;
         }
 
@@ -18,10 +18,10 @@ export default function Rating({ auth, postId, initialRating, initialVote }) {
             const response = await axios.post(`/posts/${postId}/rate`, { type });
             setMessage(response.data.message);
 
-            // Update the rating and user vote in the frontend based on the server response
             const ratingChange = response.data.ratingChange;
             setRating(rating + ratingChange);
-            setUserVote(type);
+
+            setUserVote(prevVote => (prevVote === type ? null : type));
         } catch (error) {
             setMessage(error.response.data.message);
         }

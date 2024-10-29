@@ -28,13 +28,14 @@ export default function Layout({ header, children }) {
                         {/* <!-- Main Links --> */}
                         <div className="hidden md:flex gap-10 pl-10">
                             <NavLink style={{ fontFamily: "'Exo 2', sans-serif" }} href={route('posts.index')}>Posts</NavLink>
+                            <NavLink style={{ fontFamily: "'Exo 2', sans-serif" }} href={route('posts.myPosts')}>My Posts</NavLink>
                         </div>
                     </div>
                     <div className="self-end flex flex-row-reverse pr-16 pb-1">
                         {user ? (
                             <div
-                                className="h-11 animated-background bg-gradient-to-r from-red-400 to-yellow-400 p-0.5 flex justify-center rounded-full">
-                                
+                                className="h-11 animated-background bg-gradient-to-r from-red-500 to-yellow-500 p-0.5 flex justify-center rounded-full">
+
                                 <Link href={route('profile.show')}
                                       className="bg-gradient-to-r from-red-200 to-yellow-200 py-2 px-8 rounded-l-full border-yellow-200 hover:bg-yellow-200 duration-300 border-r-2 text-sky-900   ">
                                     Profile
