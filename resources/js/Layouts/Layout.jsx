@@ -24,7 +24,7 @@ export default function Layout({ header, children }) {
                             TalkNest
                         </Link>
                     </div>
-                    <div className="grow flex justify-center items-center">
+                    <div className="grow flex justify-center items-center text-sky-900">
                         {/* <!-- Main Links --> */}
                         <div className="hidden md:flex gap-10 pl-10">
                             <NavLink style={{ fontFamily: "'Exo 2', sans-serif" }} href={route('posts.index')}>Posts</NavLink>
@@ -36,11 +36,11 @@ export default function Layout({ header, children }) {
                                 className="h-11 animated-background bg-gradient-to-r from-red-400 to-yellow-400 p-0.5 flex justify-center rounded-full">
                                 
                                 <Link href={route('profile.show')}
-                                      className="bg-gradient-to-r from-red-200 to-yellow-200 py-2 px-8 rounded-l-full border-yellow-200 hover:bg-yellow-200 duration-300 border-r-2 text-stone-600   ">
+                                      className="bg-gradient-to-r from-red-200 to-yellow-200 py-2 px-8 rounded-l-full border-yellow-200 hover:bg-yellow-200 duration-300 border-r-2 text-sky-900   ">
                                     Profile
                                 </Link>
                                 <Link href={route('logout')} method="post"
-                                      className="bg-gradient-to-r from-yellow-200 to-red-400 py-2 px-8 rounded-r-full text-white hover:bg-yellow-200 duration-300 text-stone-600">
+                                      className="bg-gradient-to-r from-yellow-200 to-red-400 py-2 px-8 rounded-r-full text-white hover:bg-yellow-200 duration-300 text-sky-900">
                                     Logout
                                 </Link>
                             </div>
@@ -48,11 +48,11 @@ export default function Layout({ header, children }) {
                             <div
                                 className="h-11 animated-background bg-gradient-to-r from-red-200 to-yellow-200 p-0.5 flex justify-center rounded-full">
                                 <Link style={{ fontFamily: "'Exo 2', sans-serif" }} href={route('login')}
-                                      className="bg-gradient-to-r from-red-200 to-yellow-200 py-2 px-8 rounded-l-full border-yellow-200 hover:bg-yellow-200 duration-300 border-r-2 text-stone-600">
+                                      className="bg-gradient-to-r from-red-200 to-yellow-200 py-2 px-8 rounded-l-full border-yellow-200 hover:bg-yellow-200 duration-300 border-r-2 text-sky-900">
                                     Login
                                 </Link>
                                 <Link style={{ fontFamily: "'Exo 2', sans-serif" }} href={route('register')}
-                                      className="bg-gradient-to-r from-yellow-200 to-red-200 py-2 px-8 rounded-r-full text-white hover:bg-yellow-200 duration-300 text-stone-600">
+                                      className="bg-gradient-to-r from-yellow-200 to-red-200 py-2 px-8 rounded-r-full text-white hover:bg-yellow-200 duration-300 text-sky-900">
                                     Register
                                 </Link>
                             </div>
